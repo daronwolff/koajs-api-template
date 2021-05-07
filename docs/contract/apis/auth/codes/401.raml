@@ -1,0 +1,16 @@
+body:
+  application/json:
+    examples:
+      password-wrong-type:
+        description: Wrong email/password
+        value:
+          {
+              "statusCode": 401,
+              "message": "Invalid email or password",
+              "details": [
+                  {
+                      "email": "me2@daronwolff.com",
+                      "password": "myWrongPassword123"
+                  }
+              ]
+          }

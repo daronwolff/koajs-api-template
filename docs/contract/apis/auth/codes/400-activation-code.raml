@@ -1,0 +1,76 @@
+body:
+  application/json:
+    examples:
+      invalid-activation-code:
+        description: "Provided token is invalid"
+        value:
+          {
+              "statusCode": 400,
+              "message": "Activation code is invalid or has expired",
+              "errorDetails": {
+                  "activationCode": "52452537d4a81451ff3d229e0f89dcbfe6990142"
+              }
+          }
+
+      missing-activationCode:
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"activationCode\" is required",
+              "errorDetails": [
+                  {
+                      "message": "\"activationCode\" is required",
+                      "path": [
+                          "activationCode"
+                      ],
+                      "type": "any.required",
+                      "context": {
+                          "label": "activationCode",
+                          "key": "activationCode"
+                      }
+                  }
+              ]
+          }
+
+      long-activationCode:
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"activationCode\" length must be less than or equal to 80 characters long",
+              "errorDetails": [
+                  {
+                      "message": "\"activationCode\" length must be less than or equal to 80 characters long",
+                      "path": [
+                          "activationCode"
+                      ],
+                      "type": "string.max",
+                      "context": {
+                          "limit": 80,
+                          "value": "52452537d4a81451ff3d229e0f89dcbfe699014252452537d4a81451ff3d229e0f89dcbfe699014252452537d4a81451ff3d229e0f89dcbfe699014252452537d4a81451ff3d229e0f89dcbfe699014252452537d4a81451ff3d229e0f89dcbfe699014252452537d4a81451ff3d229e0f89dcbfe699014252452537d4a81451ff3d229e0f89dcbfe699014252452537d4a81451ff3d229e0f89dcbfe6990142",
+                          "label": "activationCode",
+                          "key": "activationCode"
+                      }
+                  }
+              ]
+          }
+
+      wrong-activationCode-datatype:
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"activationCode\" must be a string",
+              "errorDetails": [
+                  {
+                      "message": "\"activationCode\" must be a string",
+                      "path": [
+                          "activationCode"
+                      ],
+                      "type": "string.base",
+                      "context": {
+                          "label": "activationCode",
+                          "value": 222,
+                          "key": "activationCode"
+                      }
+                  }
+              ]
+          }

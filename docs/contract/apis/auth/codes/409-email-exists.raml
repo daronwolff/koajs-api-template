@@ -1,0 +1,12 @@
+body:
+  application/json:
+    examples:
+      email-already-created:
+        description: Email already exists in the database:
+        value:
+          {
+              "message": "Email account already exists",
+              "errorDetails": {
+                  "email": "demo@demo.com"
+              }
+          }

@@ -1,0 +1,64 @@
+body:
+  application/json:
+    examples:
+      empty-payload:
+        {
+            "statusCode": 400,
+            "message": "\"value\" is required",
+            "errorDetails": [
+                {
+                    "message": "\"value\" is required",
+                    "path": [
+                        "value"
+                    ],
+                    "type": "any.required",
+                    "context": {
+                        "label": "value",
+                        "key": "value"
+                    }
+                }
+            ]
+        }
+
+      missing-date:
+        description: When the date is missing
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"date\" is required",
+              "errorDetails": [
+                  {
+                      "message": "\"date\" is required",
+                      "path": [
+                          "date"
+                      ],
+                      "type": "any.required",
+                      "context": {
+                          "label": "date",
+                          "key": "date"
+                      }
+                  }
+              ]
+          }
+
+      invalid-date:
+          description: When the date is invalid format
+          value:
+            {
+                "statusCode": 400,
+                "message": "\"date\" must be a valid date",
+                "errorDetails": [
+                    {
+                        "message": "\"date\" must be a valid date",
+                        "path": [
+                            "date"
+                        ],
+                        "type": "date.base",
+                        "context": {
+                            "label": "date",
+                            "value": "dsadas",
+                            "key": "date"
+                        }
+                    }
+                ]
+            }

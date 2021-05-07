@@ -1,0 +1,48 @@
+body:
+  application/json:
+    examples:
+      missing-email:
+        description: Email is not present in body
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"email\" is required",
+              "errorDetails": [
+                  {
+                      "message": "\"email\" is required",
+                      "path": [
+                          "email"
+                      ],
+                      "type": "any.required",
+                      "context": {
+                          "label": "email",
+                          "key": "email"
+                      }
+                  }
+              ]
+          }
+
+      invalid-email:
+        description: Email using wrong format
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"email\" must be a valid email",
+              "errorDetails": [
+                  {
+                      "message": "\"email\" must be a valid email",
+                      "path": [
+                          "email"
+                      ],
+                      "type": "string.email",
+                      "context": {
+                          "value": "Hey there",
+                          "invalids": [
+                              "Hey there"
+                          ],
+                          "label": "email",
+                          "key": "email"
+                      }
+                  }
+              ]
+          }

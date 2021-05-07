@@ -1,0 +1,24 @@
+body:
+  application/json:
+    examples:
+      unknow-internal-error-server:
+        description: Internal error server
+        value:
+          {
+              "statusCode": 500,
+              "message": "Internal Server Error",
+              "errorDetails": []
+          }
+
+      known-internal-error-server:
+        description: Internal error server
+        value:
+          {
+              "statusCode": 500,
+              "message": "Internal Server Error",
+              "errorDetails": [
+                {
+                  "message": "somethign wrong happened"
+                }
+              ]
+          }

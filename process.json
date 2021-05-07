@@ -1,0 +1,11 @@
+{
+  "apps": [{
+    "name": "KoaWolff",
+    "script": "./app/index.js",
+    "instances": 2,
+    "env": {
+      "PORT": "3000",
+      "env": "development"
+    }
+  }]
+}

@@ -1,0 +1,24 @@
+application/json:
+  examples:
+    new-user-information-required:
+      description: Minimum payload required
+      value:
+        {
+          "firstName": "Joe",
+          "email": "super@alan.com",
+          "password": "12345678",
+          "passwordConfirmation": "12345678"
+          }
+
+    new-user-information-optional:
+      description: Payload example with optional values
+      value:
+        {
+          "firstName": "Joe",
+          "lastName": "Doe",
+          "middleName": "Pac",
+          "email": "super@alan.com",
+          "password": "12345678",
+          "passwordConfirmation": "12345678",
+          "dob": "2020-02-02T12:00:00"
+        }

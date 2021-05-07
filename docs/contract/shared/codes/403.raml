@@ -1,0 +1,11 @@
+body:
+  application/json:
+    examples:
+      invalid-token:
+        description: 'Token is invalid'
+        value:
+          {
+            "statusCode": 403,
+            "message": "Forbidden",
+            "errorDetails": []
+          }

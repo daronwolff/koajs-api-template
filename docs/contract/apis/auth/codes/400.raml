@@ -1,0 +1,67 @@
+body:
+  application/json:
+    examples:
+      missing-email:
+        description: Email is not present in body
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"email\" is required",
+              "errorDetails": [
+                  {
+                      "message": "\"email\" is required",
+                      "path": [
+                          "email"
+                      ],
+                      "type": "any.required",
+                      "context": {
+                          "label": "email",
+                          "key": "email"
+                      }
+                  }
+              ]
+          }
+
+      missing-password:
+        description: Password is not present in body
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"password\" is required",
+              "errorDetails": [
+                  {
+                      "message": "\"password\" is required",
+                      "path": [
+                          "password"
+                      ],
+                      "type": "any.required",
+                      "context": {
+                          "label": "password",
+                          "key": "password"
+                      }
+                  }
+              ]
+          }
+
+      password-wrong-type:
+        description: Wrong data type in password
+        value:
+          {
+              "statusCode": 400,
+              "message": "\"password\" must be a string",
+              "errorDetails": [
+                  {
+                      "message": "\"password\" must be a string",
+                      "path": [
+                          "password"
+                      ],
+                      "type": "string.base",
+                      "context": {
+                          "label": "password",
+                          "value": false,
+                          "key": "password"
+                      }
+                  }
+              ]
+          }
+
