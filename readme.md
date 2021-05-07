@@ -1,5 +1,6 @@
 # Koa Wolff
-Koa JS API template
+
+Koa JS API + Mongo DB template
 
 This repository contains APIS for:
 
@@ -7,13 +8,14 @@ This repository contains APIS for:
 - User Authentication
 - Mongo DB integration
 
-## Endpoints:
-```
-GET /api/v1/todo
-POST /api/v1/todo
-GET /api/v1/todo/:todoId
-PUT /api/v1/todo/:todoId
-DELETE /api/v1/todo/:todoId
+## Endpoints
+
+```txt
+GET /api/v1/todos
+POST /api/v1/todos
+GET /api/v1/todos/:todoId
+PUT /api/v1/todos/:todoId
+DELETE /api/v1/todos/:todoId
 
 POST /auth/register
 POST /auth/activate-account
@@ -28,7 +30,9 @@ POST /auth/reset-password
 
 2.- `npm i`
 
-## How to use:
+3.- `mongo` is required
+
+## How to use
 
 Run app
 `npm run start`
@@ -36,32 +40,39 @@ Run app
 Run for development
 `npm run dev`
 
-
-## Directories:
+## Directories
 
 ### config
+
 Configuration files
 
 ### constants
+
 Directory for constant variables, example error message texts, status codes
 
 ### routes
+
 API routes. Routes should include controllers and joi validations
 
-### models:
+### models
+
 Database models
 
 ### middlewares
+
 Koa middlewares
 
-### services:
+### services
+
 Services to connect the controllers to database models
 
 ### validations
+
 Joi validations for routes. Use following verbs to describe the validation type: [list, get, create, update, delete]
 
 Example for POST:
-```
+
+```javascript
   create: {
     body: {
       name: rules
@@ -77,41 +88,54 @@ Example for POST:
 ```
 
 ### helpers
+
 Pure functions (Given the same inputs, always returns the same output).
 
 ### constants
+
 Constant values
 
-### controllers:
+### controllers
+
 Handler functions
 
-# Coding style:
+### Coding style
+
 https://github.com/google/eslint-config-google & https://google.github.io/styleguide/jsguide.html
 
-# Versioning
+## Versioning
 
-## Types:
+### Types
+
 *feat* new feature
+
 *fix* bug fix
+
 *refactor* refactoring code
-*style* formating, missing semicolon, linter suggestions... no code change.
+
+*style* formatting, missing semicolon, linter suggestions... no code change.
+
 *doc* changes in documentation
+
 *test* adding or refactoring tests, no production code change
 
-## Branching
+### Branching
+
 Branches must use following structure:
 `<type>/title`
 
 Example:
 `feat/login-endpoint`
 
-## Commits
+### Commits
+
 ```
 <type>: Title
 # notice this breakline
 
 Description of commit
 ```
+
 Example:
 
 ```
@@ -127,5 +151,7 @@ Body:
 }
 
 ```
-# API documentation
-To generate the api HTML documentation check /docs/contract directory
+
+## API documentation
+
+To generate the api HTML documentation check `/docs/contract` directory
