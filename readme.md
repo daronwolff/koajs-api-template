@@ -11,11 +11,11 @@ This repository contains APIS for:
 ## Endpoints
 
 ```txt
-GET /api/v1/todos
-POST /api/v1/todos
-GET /api/v1/todos/:todoId
-PUT /api/v1/todos/:todoId
-DELETE /api/v1/todos/:todoId
+GET /v1/todos
+POST /v1/todos
+GET /v1/todos/:todoId
+PUT /v1/todos/:todoId
+DELETE /v1/todos/:todoId
 
 POST /auth/register
 POST /auth/activate-account

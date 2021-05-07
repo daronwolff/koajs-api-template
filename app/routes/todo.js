@@ -4,7 +4,7 @@
 const todoController = require('../controllers/todo');
 const todoValidations = require('../validations/todo');
 
-const BASE_URL = '/todos';
+const BASE_URL = '/v1/todos';
 const todoRoutes = [
   {
     method: 'get',
